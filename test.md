@@ -8,13 +8,14 @@ Binary packages are provided for the following Linux distributions:
   - Debian 11 "Bullseye"
 
 Ubuntu packages are tested on Xubuntu LTS distributions and should work on
-any Ubuntu desktop flavour (e.g. native Ubuntu, KUbuntu, LUbuntu). 
+any Ubuntu desktop flavour (e.g. native Ubuntu, Kubuntu, Lubuntu). 
 
 Adding the binary package repository is done by adding an entry to the package
-managment sources, e.g. by creating a file called
-  /etc/apt/sources.list.d/airtools.list
+managment sources, e.g. by creating a file `/etc/apt/sources.list.d/airtools.list`
 containing a line:
-  deb [trusted=yes] http://fg-kometen.vdsastro.de/airtools/debian YOUR_DISTRIBUTION main
+
+    deb [trusted=yes] http://fg-kometen.vdsastro.de/airtools/debian YOUR_DISTRIBUTION main
+
 where YOUR_DISTRIBUTION has to be replaced by the codename of your distribution
 (e.g. focal).
 
