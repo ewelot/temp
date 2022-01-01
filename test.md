@@ -16,12 +16,13 @@ containing a line:
 
     deb [trusted=yes] http://fg-kometen.vdsastro.de/airtools/debian YOUR_DISTRIBUTION main
 
-where YOUR_DISTRIBUTION has to be replaced by the codename of your distribution
+where `YOUR_DISTRIBUTION` has to be replaced by the codename of your distribution
 (e.g. focal).
 
 Installation (or any later update) is done by invoking the following commands:
-sudo apt update
-sudo apt install airtools
+
+    sudo apt update
+    sudo apt install airtools
 
 
 ## Compiling and Installing from source code
