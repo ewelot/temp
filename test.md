@@ -10,14 +10,19 @@ Binary packages are provided for the following Linux distributions:
 Ubuntu packages are tested on Xubuntu LTS distributions and should work on
 any Ubuntu desktop flavour (e.g. native Ubuntu, Kubuntu, Lubuntu). 
 
-Adding the binary package repository is done by adding an entry to the package
-managment sources, e.g. by creating a file `/etc/apt/sources.list.d/airtools.list`
-containing a line:
+Adding the binary package repository of the AIRTOOLS software is done by
+adding an entry to the package managment sources.
+If e.g. your distribution is based on Ubuntu 20.04 "Focal" you should run the
+following commands in a terminal.
 
-    deb [trusted=yes] http://fg-kometen.vdsastro.de/airtools/debian YOUR_DISTRIBUTION main
+    DIST=focal
+    REPO=http://fg-kometen.vdsastro.de/airtools/debian
+    SRCFILE=/etc/apt/sources.list.d/airtools.list
+    sudo bash -c "echo deb [trusted=yes] $REPO $DIST main > $SRCFILE"
 
-where `YOUR_DISTRIBUTION` has to be replaced by the codename of your distribution
-(e.g. focal).
+If you are running a different distribution, you must replace the setting of
+DIST by using your distributions code name (e.g. bullseye) in the command
+sequence above.
 
 Installation (or any later update) is done by invoking the following commands:
 
@@ -42,17 +47,17 @@ distribution.
 
 In order to run the AIRTOOLS software you must install additional software
 either by means of binary packages provided by your distribution or
-by compiling/installing them from source by yourself:
+by compiling/installing them from sources by yourself:
 
 - missfits, scamp, sextractor, skymaker, stiff, swarp (https://github.com/astromatic)
 - astrometry.net (https://nova.astrometry.net)
 - stilts (http://www.star.bris.ac.uk/~mbt/stilts)
 - saods9 (https://sites.google.com/cfa.harvard.edu/saoimageds9)
 - xpa-tools (https://hea-www.harvard.edu/RD/xpa)
-- wcstools (http://tdc-www.harvard.edu/software/wcstools/)
+- wcstools (http://tdc-www.harvard.edu/software/wcstools)
 - cfitsio-examples (https://heasarc.gsfc.nasa.gov/docs/software/fitsio/cexamples.html)
 - python3-pyvips (https://github.com/libvips/pyvips)
-- python3-ephem (https://rhodesmill.org/pyephem/)
+- python3-ephem (https://rhodesmill.org/pyephem)
 
 If you have questions regarding the detailed procedure, do not hesitate to
 contact the author of the AIRTOOLS software.
